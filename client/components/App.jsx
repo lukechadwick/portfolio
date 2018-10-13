@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import InternapAPI from './InternapAPI';
@@ -19,18 +19,13 @@ class App extends Component {
             <p>
               {this.props.auth.isAuthenticated
                 ? 'Logged in as: '
-                : 'Please log in'}
+                : 'Please login or register'}
             </p>
             <p>
               {this.props.auth.isAuthenticated && this.props.auth.user.username}
             </p>
             <Link to="/">
-              <button
-                className="btn btn-primary m-1"
-                onClick={() => this.forceUpdate()}
-              >
-                Home
-              </button>
+              <button className="btn btn-primary m-1">Home</button>
             </Link>
             <Link to="/db">
               <button className="btn btn-primary m-1">Database Query</button>
@@ -59,18 +54,16 @@ class App extends Component {
               </button>
             )}
 
-            <Switch>
-              <Route exact path="/db" component={InternapAPI} />
-              <Route exact path="/ext" component={ExternalAPI} />
+            <Route exact path="/db" component={InternapAPI} />
+            <Route exact path="/ext" component={ExternalAPI} />
 
-              {!this.props.auth.isAuthenticated && (
-                <Route exact path="/register" component={RegisterForm} />
-              )}
+            {!this.props.auth.isAuthenticated && (
+              <Route exact path="/register" component={RegisterForm} />
+            )}
 
-              {!this.props.auth.isAuthenticated && (
-                <Route exact path="/login" component={LoginForm} />
-              )}
-            </Switch>
+            {!this.props.auth.isAuthenticated && (
+              <Route exact path="/login" component={LoginForm} />
+            )}
           </div>
         </div>
       </Router>
