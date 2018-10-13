@@ -7,39 +7,9 @@ import ExternalAPI from './ExternalAPI';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-import { isAuthenticated, getUserTokenInfo } from '../utils/auth';
-
 import { logoutUser } from '../actions/logout';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      authenticated: false,
-      loggedInAs: ''
-    };
-
-    this.logMeout = this.logMeout.bind(this);
-    this.refreshLoginState = this.refreshLoginState.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({
-      authenticated: isAuthenticated()
-    });
-  }
-
-  refreshLoginState() {
-    this.setState({
-      authenticated: isAuthenticated()
-    });
-  }
-
-  logMeout() {
-    this.props.logoutUser();
-    this.setState({ authenticated: false });
-  }
-
   render() {
     return (
       <Router>
@@ -47,9 +17,13 @@ class App extends Component {
           <div className="jumbotron">
             <h1>Hello World</h1>
             <p>
-              {this.state.authenticated ? 'Logged in as: ' : 'Please log in'}
+              {this.props.auth.isAuthenticated
+                ? 'Logged in as: '
+                : 'Please log in'}
             </p>
-            <p>{this.state.authenticated && getUserTokenInfo().username}</p>
+            <p>
+              {this.props.auth.isAuthenticated && this.props.auth.user.username}
+            </p>
             <Link to="/">
               <button
                 className="btn btn-primary m-1"
@@ -66,7 +40,7 @@ class App extends Component {
                 External API Query
               </button>
             </Link>
-            {!this.state.authenticated && (
+            {!this.props.auth.isAuthenticated && (
               <React.Fragment>
                 <Link to="/register">
                   <button className="btn btn-primary m-1">Register</button>
@@ -76,31 +50,24 @@ class App extends Component {
                 </Link>
               </React.Fragment>
             )}
+            {this.props.auth.isAuthenticated && (
+              <button
+                className="btn btn-primary m-1"
+                onClick={() => this.props.logoutUser()}
+              >
+                Logout
+              </button>
+            )}
+
             <Route exact path="/db" component={InternapAPI} />
             <Route exact path="/ext" component={ExternalAPI} />
 
-            <button className="btn btn-primary m-1" onClick={this.logMeout}>
-              Logout
-            </button>
-
-            {!this.state.authenticated && (
-              <Route
-                exact
-                path="/register"
-                render={() => (
-                  <RegisterForm refreshLoginState={this.refreshLoginState} />
-                )}
-              />
+            {!this.props.auth.isAuthenticated && (
+              <Route exact path="/register" component={RegisterForm} />
             )}
 
-            {!this.state.authenticated && (
-              <Route
-                exact
-                path="/login"
-                render={() => (
-                  <LoginForm refreshLoginState={this.refreshLoginState} />
-                )}
-              />
+            {!this.props.auth.isAuthenticated && (
+              <Route exact path="/login" component={LoginForm} />
             )}
           </div>
         </div>
@@ -111,10 +78,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    isAuthenticated: state.isAuthenticated
-    // items: state.items,
-    // hasErrored: state.itemsHasErrored,
-    // isLoading: state.itemsIsLoading
+    auth: state.auth
   };
 };
 
