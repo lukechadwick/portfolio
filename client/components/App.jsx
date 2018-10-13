@@ -6,7 +6,6 @@ import InternapAPI from './InternapAPI';
 import ExternalAPI from './ExternalAPI';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
-import Logout from './Logout';
 
 import { isAuthenticated, getUserTokenInfo } from '../utils/auth';
 
@@ -77,12 +76,11 @@ class App extends Component {
                 </Link>
               </React.Fragment>
             )}
-            {this.state.authenticated && <Logout logOut={this.logOut} />}
             <Route exact path="/db" component={InternapAPI} />
             <Route exact path="/ext" component={ExternalAPI} />
 
             <button className="btn btn-primary m-1" onClick={this.logMeout}>
-              Logout2
+              Logout
             </button>
 
             {!this.state.authenticated && (
