@@ -4,12 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
-import {
-  HashRouter as Router,
-  Route,
-  Link,
-  withRouter
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './components/App';
 import reducers from './reducers';

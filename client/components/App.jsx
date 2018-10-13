@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import InternapAPI from './InternapAPI';
@@ -59,16 +59,18 @@ class App extends Component {
               </button>
             )}
 
-            <Route exact path="/db" component={InternapAPI} />
-            <Route exact path="/ext" component={ExternalAPI} />
+            <Switch>
+              <Route exact path="/db" component={InternapAPI} />
+              <Route exact path="/ext" component={ExternalAPI} />
 
-            {!this.props.auth.isAuthenticated && (
-              <Route exact path="/register" component={RegisterForm} />
-            )}
+              {!this.props.auth.isAuthenticated && (
+                <Route exact path="/register" component={RegisterForm} />
+              )}
 
-            {!this.props.auth.isAuthenticated && (
-              <Route exact path="/login" component={LoginForm} />
-            )}
+              {!this.props.auth.isAuthenticated && (
+                <Route exact path="/login" component={LoginForm} />
+              )}
+            </Switch>
           </div>
         </div>
       </Router>
