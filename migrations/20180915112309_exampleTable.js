@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary();
     table.string('username');
     table.string('email');
-    table.string('hash');
+    table.binary('hash');
   });
 };
 
