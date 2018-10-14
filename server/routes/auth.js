@@ -41,7 +41,7 @@ function register(req, res, next) {
 function login(req, res, next) {
   getUserByName(req.body.username)
     .then(user => {
-      return user || invalidCredentials(res);
+      return user;
     })
     .then(user => {
       return user && hash.verifyUser(user.hash, req.body.password);
