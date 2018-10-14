@@ -1,6 +1,6 @@
-const request = require('superagent');
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { registerUser, registerError } from '../actions/register';
 
 class RegisterForm extends Component {
@@ -11,18 +11,16 @@ class RegisterForm extends Component {
       email: '',
       password: ''
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({
       ...this.state,
       [e.target.name]: e.target.value
     });
-  }
+  };
 
-  handleClick(e) {
+  handleClick = e => {
     e.preventDefault();
     const { username, email, password } = this.state;
     const creds = {
@@ -31,9 +29,13 @@ class RegisterForm extends Component {
       password: password.trim()
     };
     this.props.registerUser(creds);
-  }
+  };
 
   render() {
+    if (this.props.auth.isAuthenticated) {
+      return <Redirect to="/" />;
+    }
+
     return (
       <form name="SignUp" action="/api/v1/auth/register" method="POST">
         <h3>Sign up below</h3>
@@ -86,7 +88,13 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(RegisterForm);

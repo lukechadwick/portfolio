@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import App from './components/App';
 import reducers from './reducers';
@@ -20,7 +20,9 @@ const store = createStore(
 render(
   <Provider store={store}>
     <Router>
-      <App />
+      <Switch>
+        <App />
+      </Switch>
     </Router>
   </Provider>,
   document.getElementById('app')

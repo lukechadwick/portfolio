@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import InternapAPI from './InternapAPI';
@@ -12,61 +12,52 @@ import { logoutUser } from '../actions/logout';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="container">
-          <div className="jumbotron">
-            <h1>Hello World</h1>
-            <p>
-              {this.props.auth.isAuthenticated
-                ? 'Logged in as: '
-                : 'Please login or register'}
-            </p>
-            <p>
-              {this.props.auth.isAuthenticated && this.props.auth.user.username}
-            </p>
-            <Link to="/">
-              <button className="btn btn-primary m-1">Home</button>
-            </Link>
-            <Link to="/db">
-              <button className="btn btn-primary m-1">Database Query</button>
-            </Link>
-            <Link to="/ext">
-              <button className="btn btn-primary m-1">
-                External API Query
-              </button>
-            </Link>
-            {!this.props.auth.isAuthenticated && (
-              <React.Fragment>
-                <Link to="/register">
-                  <button className="btn btn-primary m-1">Register</button>
-                </Link>
-                <Link to="/login">
-                  <button className="btn btn-primary m-1">Login</button>
-                </Link>
-              </React.Fragment>
-            )}
-            {this.props.auth.isAuthenticated && (
-              <button
-                className="btn btn-primary m-1"
-                onClick={() => this.props.logoutUser()}
-              >
-                Logout
-              </button>
-            )}
+      <div className="container">
+        <div className="jumbotron">
+          <h1>Hello World</h1>
+          <p>
+            {this.props.auth.isAuthenticated
+              ? 'Logged in as: '
+              : 'Please login or register'}
+          </p>
+          <p>
+            {this.props.auth.isAuthenticated && this.props.auth.user.username}
+          </p>
 
-            <Route exact path="/db" component={InternapAPI} />
-            <Route exact path="/ext" component={ExternalAPI} />
+          <Link to="/">
+            <button className="btn btn-primary m-1">Home</button>
+          </Link>
+          <Link to="/db">
+            <button className="btn btn-primary m-1">Database Query</button>
+          </Link>
+          <Link to="/ext">
+            <button className="btn btn-primary m-1">External API Query</button>
+          </Link>
+          {!this.props.auth.isAuthenticated && (
+            <React.Fragment>
+              <Link to="/register">
+                <button className="btn btn-primary m-1">Register</button>
+              </Link>
+              <Link to="/login">
+                <button className="btn btn-primary m-1">Login</button>
+              </Link>
+            </React.Fragment>
+          )}
+          {this.props.auth.isAuthenticated && (
+            <button
+              className="btn btn-primary m-1"
+              onClick={() => this.props.logoutUser()}
+            >
+              Logout
+            </button>
+          )}
 
-            {!this.props.auth.isAuthenticated && (
-              <Route exact path="/register" component={RegisterForm} />
-            )}
-
-            {!this.props.auth.isAuthenticated && (
-              <Route exact path="/login" component={LoginForm} />
-            )}
-          </div>
+          <Route exact path="/db" component={InternapAPI} />
+          <Route exact path="/ext" component={ExternalAPI} />
+          <Route exact path="/register" component={RegisterForm} />
+          <Route exact path="/login" component={LoginForm} />
         </div>
-      </Router>
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Redirect } from 'react-router-dom';
 import { loginUser } from '../actions/login';
 
 class LoginForm extends Component {
@@ -10,29 +10,30 @@ class LoginForm extends Component {
       username: '',
       password: ''
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({
       ...this.state,
       [e.target.name]: e.target.value
     });
-  }
+  };
 
-  handleClick(e) {
+  handleClick = e => {
     e.preventDefault();
     const { username, password } = this.state;
     const creds = {
       username: username.trim(),
       password: password.trim()
     };
-    this.forceUpdate();
     this.props.loginUser(creds);
-  }
+  };
 
   render() {
+    if (this.props.auth.isAuthenticated) {
+      return <Redirect to="/" />;
+    }
+
     return (
       <form name="Login" action="/api/v1/auth/login" method="POST">
         <h3>Login below</h3>
@@ -64,6 +65,12 @@ class LoginForm extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     loginUser: creds => {
@@ -73,6 +80,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(LoginForm);
