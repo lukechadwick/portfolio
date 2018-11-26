@@ -1,3 +1,16 @@
 body {
-  /* color: red; */
+	background-image: url('https://cdn.allwallpaper.in/wallpapers/3395x2057/16838/outer-space-stars-3395x2057-wallpaper.jpg');
+	background-size: contain;
+}
+
+.box {
+	background-color: orange;
+}
+
+.card {
+	height: 100%;
+}
+
+.center {
+	text-align: center;
 }
