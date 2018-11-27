@@ -1,6 +1,6 @@
 body {
 	background-image: url('https://cdn.allwallpaper.in/wallpapers/3395x2057/16838/outer-space-stars-3395x2057-wallpaper.jpg');
-	background-size: contain;
+	background-size: cover;
 }
 
 .box {
@@ -13,4 +13,12 @@ body {
 
 .center {
 	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+.navbar {
+	opacity: 1;
 }
