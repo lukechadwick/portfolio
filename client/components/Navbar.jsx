@@ -9,7 +9,7 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<a className="navbar-brand" href="#">
-					{'{'}Luke Chadwick{'}'}
+					{'{'}Luke: Chadwick{'}'}
 				</a>
 				<button
 					className="navbar-toggler"
