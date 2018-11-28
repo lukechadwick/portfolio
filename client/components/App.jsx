@@ -9,27 +9,8 @@ class App extends Component {
         <Navbar />
         <div class="ocrloader">
           <em />
-          <div>
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
           <span />
-        </div>{' '}
+        </div>
         <Grid />
       </React.Fragment>
     );
