@@ -8,9 +8,7 @@ class Card extends Component {
   render() {
     return (
       <div className="card bg-light mb-3">
-        <div className="card-header">
-          <h4>{this.props.title}</h4>
-        </div>
+        <div className="card-header">{this.props.title}</div>
         <div className="card-body">
           {this.props.title == 'Me' && (
             <React.Fragment>
@@ -25,21 +23,27 @@ class Card extends Component {
             <React.Fragment>
               <h5 className="card-title center">Email, Linked-in or GitHub</h5>
               <div className="center">
-                <a href="www.google.com" target="blank">
+                <a
+                  href="mailto:llukechadwick@gmail.com?subject=Let's%20get%20in%20touch&body="
+                  target="_blank"
+                >
                   <img
                     draggable="false"
                     src="email.png"
                     className="contactImage"
                   />
                 </a>
-                <a href="www.google.com" target="blank">
+                <a
+                  href="https://www.linkedin.com/in/lukeachadwick/"
+                  target="_blank"
+                >
                   <img
                     draggable="false"
                     src="linkedin.png"
                     className="contactImage"
                   />
                 </a>
-                <a href="www.google.com" target="blank">
+                <a href="https://github.com/lukechadwick" target="_blank">
                   <img
                     draggable="false"
                     src="github.png"
@@ -63,7 +67,67 @@ class Card extends Component {
           )}
           {this.props.title == 'Projects' && (
             <React.Fragment>
-              <p>Projects</p>
+              <h5 className="card-title center">A few things I've worked on</h5>
+              <h4>Xiayu</h4>
+              <p>
+                A 2D platform/shooter written in Javascript and rendered using
+                Canvas, featuring collision detection, basic physics, AI, and of
+                course, a boss fight. Playable{' '}
+                <a href="https://lukechadwick.github.io/xiayu/" target="_blank">
+                  here.
+                </a>
+              </p>
+              <h4>GTST Dashboard</h4>
+              <p>
+                An all-in-one dashboard using widget based design, with
+                resizable and draggable applets. Powered by React/Redux with
+                Material-UI as the design framework. Hosted{' '}
+                <a href="http://gyst-dash.herokuapp.com/" target="_blank">
+                  here.
+                </a>
+              </p>
+              <h4>VPN Project</h4>
+              <p>
+                A VPN service aimed at providing an easy to use and performant
+                experience. Powered by and hosted on Vultr running Ubuntu and
+                using Shadowsocks to encrypt and protect traffic. Website
+                powered by React/node/nginx and SSL certs provided by Let's
+                Encrypt. Hosted{' '}
+                <a href="https://codeproject.fun/" target="_blank">
+                  here.
+                </a>
+              </p>
+              <h4>Ruby on Rails Blog</h4>
+              <p>
+                A simple blog website make to learn basic CRUD operations in
+                Ruby on Rails, styled with Bootstrap 4. Hosted{' '}
+                <a
+                  href="http://rubyonrails-blog.herokuapp.com/"
+                  target="_blank"
+                >
+                  here.
+                </a>
+              </p>
+              <h4>C#</h4>
+              <p>
+                A few projects in C# ranging from a{' '}
+                <a
+                  href="https://github.com/lukechadwick/FTDS-finish-the-day-sheet-"
+                  target="_blank"
+                >
+                  simple app
+                </a>{' '}
+                I used to automate the paperwork at a previous job in
+                hospitality, to an{' '}
+                <a
+                  href="https://github.com/lukechadwick/CS-GO-Aimbot-ESP"
+                  target="_blank"
+                >
+                  reseach project
+                </a>{' '}
+                into how people cheat in online games, in this case the popular
+                game Counter-Strike: GO
+              </p>
             </React.Fragment>
           )}
         </div>

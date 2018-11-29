@@ -40,10 +40,11 @@ class Grid extends Component {
         },
         {
           w: 6,
-          h: 2,
+          h: 4,
           x: 0,
           y: 3,
-          i: 'Card'
+          i: 'Card',
+          isDraggable: false
           // minW: 2,
           // maxW: 2,
           // minH: 2,

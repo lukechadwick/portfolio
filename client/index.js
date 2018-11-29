@@ -9,10 +9,10 @@ import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 
 render(
-	<Router>
-		<Switch>
-			<App />
-		</Switch>
-	</Router>,
-	document.getElementById('app')
+  <React.Fragment>
+    {/* <Switch> */}
+    <App />
+    {/* </Switch> */}
+  </React.Fragment>,
+  document.getElementById('app')
 );
