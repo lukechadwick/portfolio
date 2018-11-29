@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 class Navbar extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
-	render() {
-		return (
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-				<a className="navbar-brand" href="#">
-					{'{'}Luke: Chadwick{'}'}
-				</a>
-				<button
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="#">
+          {'{'}Luke: Chadwick{'}'}
+        </a>
+        {/* <button
 					className="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
@@ -40,10 +40,10 @@ class Navbar extends Component {
 							</a>
 						</li>
 					</ul>
-				</div>
-			</nav>
-		);
-	}
+				</div> */}
+      </nav>
+    );
+  }
 }
 
 export default Navbar;

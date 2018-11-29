@@ -67,7 +67,10 @@ class Card extends Component {
           )}
           {this.props.title == 'Projects' && (
             <React.Fragment>
-              <h5 className="card-title center">A few things I've worked on</h5>
+              <h4 className="card-title center">
+                A few things I've worked on...
+              </h4>
+              <br />
               <h4>Xiayu</h4>
               <p>
                 A 2D platform/shooter written in Javascript and rendered using
@@ -77,6 +80,7 @@ class Card extends Component {
                   here.
                 </a>
               </p>
+              <br />
               <h4>GTST Dashboard</h4>
               <p>
                 An all-in-one dashboard using widget based design, with
@@ -86,6 +90,7 @@ class Card extends Component {
                   here.
                 </a>
               </p>
+              <br />
               <h4>VPN Project</h4>
               <p>
                 A VPN service aimed at providing an easy to use and performant
@@ -97,6 +102,7 @@ class Card extends Component {
                   here.
                 </a>
               </p>
+              <br />
               <h4>Ruby on Rails Blog</h4>
               <p>
                 A simple blog website make to learn basic CRUD operations in
@@ -108,6 +114,7 @@ class Card extends Component {
                   here.
                 </a>
               </p>
+              <br />
               <h4>C#</h4>
               <p>
                 A few projects in C# ranging from a{' '}
@@ -118,7 +125,7 @@ class Card extends Component {
                   simple app
                 </a>{' '}
                 I used to automate the paperwork at a previous job in
-                hospitality, to an{' '}
+                hospitality, to a{' '}
                 <a
                   href="https://github.com/lukechadwick/CS-GO-Aimbot-ESP"
                   target="_blank"
