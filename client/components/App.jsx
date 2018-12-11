@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import Navbar from "./Navbar";
-import Grid from "./Grid";
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import Grid from './Grid';
+import Parallax from './Parallax';
 
 class App extends Component {
   render() {
@@ -12,7 +13,9 @@ class App extends Component {
             <em />
             <span />
           </div> */}
-        <Grid />
+        {/* <Grid /> */}
+        <Parallax />
+
         {/* </div> */}
       </React.Fragment>
     );
