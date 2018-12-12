@@ -3279,6 +3279,11 @@ react-grid-layout@^0.16.6:
     react-draggable "3.x"
     react-resizable "1.x"
 
+react-parallax@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-2.1.0.tgz#3e9e88c8663d7dbe1019322cec2bb791fc6c6ead"
+  integrity sha512-L2cA4u5d1I0jovKJUVWL4ygAhuzCfHLTOTuU020nj87McapHzrsbuuICSfKCH1woHDgWuBuftthBi0cVph+gWg==
+
 react-resizable@1.x:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/react-resizable/-/react-resizable-1.7.5.tgz#83eb75bb3684da6989bbbf4f826e1470f0af902e"
@@ -3476,11 +3481,6 @@ rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   dependencies:
     glob "^7.0.5"
 
-riot-observable@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/riot-observable/-/riot-observable-3.0.0.tgz#8bbd2daf72a2141bb043082df4023dc504bad2eb"
-  integrity sha1-i70tr3KiFBuwQwgt9AI9xQS60us=
-
 ripemd160@^2.0.0, ripemd160@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
@@ -3540,13 +3540,6 @@ schema-utils@^0.4.4, schema-utils@^0.4.5:
   dependencies:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
-
-scroll-parallax@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/scroll-parallax/-/scroll-parallax-3.0.3.tgz#5219172914808db352eb7f02388ef639d598341e"
-  integrity sha512-hU14erU85cLpW+FQeSOKcmaN/TSCWALHlvV+GQIytjDQHMAfUbGbwkce8zMM/MwZgvEQGhiE5Vchk//joEDv6w==
-  dependencies:
-    riot-observable "^3.0.0"
 
 semver-diff@^2.0.0:
   version "2.1.0"
