@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { Responsive, WidthProvider } from "react-grid-layout";
+import { Responsive, WidthProvider } from 'react-grid-layout';
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-import Card from "./Card";
+import Card from './Card';
 
-import { layouts } from "./Layout";
+import { layouts } from './Layout';
 
 class Grid extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTitle: ""
+      currentTitle: ''
     };
   }
 
@@ -30,82 +30,82 @@ class Grid extends Component {
     return (
       <React.Fragment>
         <ResponsiveGridLayout
-          className="layout"
+          className='layout center'
           layouts={layouts}
           breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-          cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 4 }}
+          cols={{ lg: 4, md: 4, sm: 4, xs: 4, xxs: 4 }}
           onLayoutChange={(layout, layouts) =>
             this.onLayoutChange(layout, layouts)
           }
-          compactType="horizontal"
+          compactType='horizontal'
         >
-          <div className="box" key="Shelf">
+          <div className='box' key='Shelf'>
             <img
-              className="center gridImage shelf"
-              draggable="false"
-              src="shelf2.png"
+              className='center gridImage shelf'
+              draggable='false'
+              src='shelf2.png'
             />
-            <h2 className="center" style={{ color: "white" }}>
+            <h2 className='center' style={{ color: 'white' }}>
               Drag an icon into the scanner to find out more...
             </h2>
           </div>
-          <div className="box" key="Card">
+          <div className='box' key='Card'>
             <Card
               title={this.state.currentTitle}
               content={this.state.currentContent}
             />
           </div>
-          <div className="box" key="Tools">
-            {this.state.currentTitle == "Tools" && (
-              <div className="ocrloader">
+          <div className='box' key='Tools'>
+            {this.state.currentTitle == 'Tools' && (
+              <div className='ocrloader'>
                 <em />
                 <span />
               </div>
             )}
             <img
-              className="center gridImage"
-              draggable="false"
-              src="tools.png"
+              className='center gridImage'
+              draggable='false'
+              src='tools.png'
             />
           </div>
-          <div className="box" key="Contact Me">
-            {this.state.currentTitle == "Contact Me" && (
-              <div className="ocrloader">
+          <div className='box' key='Contact Me'>
+            {this.state.currentTitle == 'Contact Me' && (
+              <div className='ocrloader'>
                 <em />
                 <span />
               </div>
             )}
             <img
-              className="center gridImage"
-              draggable="false"
-              src="addressbook.png"
+              className='center gridImage'
+              draggable='false'
+              src='addressbook.png'
               ref={el => (this.containerLine = el)}
             />
           </div>
-          <div className="box" key="Projects">
-            {this.state.currentTitle == "Projects" && (
-              <div className="ocrloader">
+          <div className='box' key='Projects'>
+            {this.state.currentTitle == 'Projects' && (
+              <div className='ocrloader'>
                 <em />
                 <span />
               </div>
             )}
             <img
-              className="center gridImage"
-              draggable="false"
-              src="code.png"
+              className='center gridImage'
+              draggable='false'
+              src='code.png'
             />
           </div>
-          <div className="box" key="Me">
-            {this.state.currentTitle == "Me" && (
-              <div className="ocrloader">
+          <div className='box' key='Me'>
+            {this.state.currentTitle == 'Me' && (
+              <div className='ocrloader'>
                 <em />
                 <span />
               </div>
             )}
             <img
-              className="center gridImage me"
-              draggable="false"
-              src="me.jpeg"
+              className='center gridImage me'
+              draggable='false'
+              src='me.jpeg'
             />
           </div>
         </ResponsiveGridLayout>

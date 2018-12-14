@@ -23,8 +23,8 @@ class ParallaxScroll extends Component {
   render() {
     return (
       <React.Fragment>
-        <Parallax bgImage={'gg.png'} strength={500}>
-          <div style={{ height: 500, maxWidth: '80%' }}>
+        <Parallax bgImage={'gg.png'} strength={600} blur={{ min: -1, max: 3 }}>
+          <div style={{ height: 800, maxWidth: '80%' }}>
             {/* <div style={insideStyles}>HTML inside the parallax</div> */}
             <div>
               <h1>Xiayu</h1>

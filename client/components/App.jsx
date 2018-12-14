@@ -13,8 +13,10 @@ class App extends Component {
             <em />
             <span />
           </div> */}
-        {/* <Grid /> */}
-        <ParallaxScroll />
+        <div className='container'>
+          <Grid />
+        </div>
+        {/* <ParallaxScroll /> */}
 
         {/* </div> */}
       </React.Fragment>
