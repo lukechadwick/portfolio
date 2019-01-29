@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Card extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Card extends Component {
       <div className="card bg-light mb-3">
         <div className="card-header">{this.props.title}</div>
         <div className="card-body">
-          {this.props.title == 'Me' && (
+          {this.props.title == "Me" && (
             <React.Fragment>
               <h5 className="card-title">Luke Chadwick</h5>
               <p className="card-text">
@@ -19,7 +19,7 @@ class Card extends Component {
               </p>
             </React.Fragment>
           )}
-          {this.props.title == 'Contact Me' && (
+          {this.props.title == "Contact Me" && (
             <React.Fragment>
               <h5 className="card-title center">Email, Linked-in or GitHub</h5>
               <div className="center">
@@ -53,7 +53,7 @@ class Card extends Component {
               </div>
             </React.Fragment>
           )}
-          {this.props.title == 'Tools' && (
+          {this.props.title == "Tools" && (
             <React.Fragment>
               <h4 className="card-title center">The Tools of my trade</h4>
               <img draggable="false" src="js.png" className="toolImage" />
@@ -65,7 +65,7 @@ class Card extends Component {
               <img draggable="false" src="rails.png" className="toolImage" />
             </React.Fragment>
           )}
-          {this.props.title == 'Projects' && (
+          {this.props.title == "Projects" && (
             <React.Fragment>
               <h4 className="card-title center">
                 A few things I've worked on...
@@ -75,7 +75,7 @@ class Card extends Component {
               <p>
                 A 2D platform/shooter written in Javascript and rendered using
                 Canvas, featuring collision detection, basic physics, AI, and of
-                course, a boss fight. Playable{' '}
+                course, a boss fight. Playable{" "}
                 <a href="https://lukechadwick.github.io/xiayu/" target="_blank">
                   here.
                 </a>
@@ -85,7 +85,7 @@ class Card extends Component {
               <p>
                 An all-in-one dashboard using widget based design, with
                 resizable and draggable applets. Powered by React/Redux with
-                Material-UI as the design framework. Hosted{' '}
+                Material-UI as the design framework. Hosted{" "}
                 <a href="http://gyst-dash.herokuapp.com/" target="_blank">
                   here.
                 </a>
@@ -97,8 +97,8 @@ class Card extends Component {
                 experience. Powered by and hosted on Vultr running Ubuntu and
                 using Shadowsocks to encrypt and protect traffic. Website
                 powered by React/node/nginx and SSL certs provided by Let's
-                Encrypt. Hosted{' '}
-                <a href="https://codeproject.fun/" target="_blank">
+                Encrypt. Hosted{" "}
+                <a href="https://codeproject.site/" target="_blank">
                   here.
                 </a>
               </p>
@@ -106,7 +106,7 @@ class Card extends Component {
               <h4>Ruby on Rails Blog</h4>
               <p>
                 A simple blog website make to learn basic CRUD operations in
-                Ruby on Rails, styled with Bootstrap 4. Hosted{' '}
+                Ruby on Rails, styled with Bootstrap 4. Hosted{" "}
                 <a
                   href="http://rubyonrails-blog.herokuapp.com/"
                   target="_blank"
@@ -117,21 +117,21 @@ class Card extends Component {
               <br />
               <h4>C#</h4>
               <p>
-                A few projects in C# ranging from a{' '}
+                A few projects in C# ranging from a{" "}
                 <a
                   href="https://github.com/lukechadwick/FTDS-finish-the-day-sheet-"
                   target="_blank"
                 >
                   simple app
-                </a>{' '}
+                </a>{" "}
                 I used to automate the paperwork at a previous job in
-                hospitality, to a{' '}
+                hospitality, to a{" "}
                 <a
                   href="https://github.com/lukechadwick/CS-GO-Aimbot-ESP"
                   target="_blank"
                 >
                   reseach project
-                </a>{' '}
+                </a>{" "}
                 into how people cheat in online games, in this case the popular
                 game Counter-Strike: GO
               </p>
