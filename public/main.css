@@ -1,6 +1,6 @@
 body {
   /* background-image: url('https://cdn.allwallpaper.in/wallpapers/3395x2057/16838/outer-space-stars-3395x2057-wallpaper.jpg'); */
-  background-image: url('./bg.jpg');
+  background-image: url("./bg.jpg");
   background-size: cover;
 }
 
@@ -63,16 +63,22 @@ body {
   background: #657bf5;
   border-radius: 10px;
 }
+
+.containerCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ------------------------- */
 
 /* Scanner */
 .ocrloader {
-  width: 94px;
+  /* width: 94px;
   height: 77px;
   position: absolute;
   left: 63px;
-  top: 115px;
-  transform: translate(-50%, -50%);
+  top: 115px; */
+  /* transform: translate(-50%, -50%); */
   backface-visibility: hidden;
   z-index: 5;
 }
@@ -146,7 +152,7 @@ body {
 .ocrloader em:after,
 .ocrloader em:before {
   border-color: rgb(0, 255, 13);
-  content: '';
+  content: "";
   position: absolute;
   width: 19px;
   height: 16px;

@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { Responsive, WidthProvider } from 'react-grid-layout';
+import { Responsive, WidthProvider } from "react-grid-layout";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-import Card from './Card';
+import Card from "./Card";
 
-import { layouts } from './Layout';
+import { layouts } from "./Layout";
 
 class Grid extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTitle: ''
+      currentTitle: ""
     };
   }
 
@@ -45,7 +45,7 @@ class Grid extends Component {
               draggable="false"
               src="shelf2.png"
             />
-            <h2 className="center" style={{ color: 'white' }}>
+            <h2 className="center" style={{ color: "white" }}>
               Drag an icon into the scanner to find out more...
             </h2>
           </div>
@@ -56,6 +56,12 @@ class Grid extends Component {
             />
           </div>
           <div className="box" key="Tools">
+            {this.state.currentTitle == "Tools" && (
+              <div className="ocrloader">
+                <em />
+                <span />
+              </div>
+            )}
             <img
               className="center gridImage"
               draggable="false"
@@ -63,6 +69,12 @@ class Grid extends Component {
             />
           </div>
           <div className="box" key="Contact Me">
+            {this.state.currentTitle == "Contact Me" && (
+              <div className="ocrloader">
+                <em />
+                <span />
+              </div>
+            )}
             <img
               className="center gridImage"
               draggable="false"
@@ -71,6 +83,12 @@ class Grid extends Component {
             />
           </div>
           <div className="box" key="Projects">
+            {this.state.currentTitle == "Projects" && (
+              <div className="ocrloader">
+                <em />
+                <span />
+              </div>
+            )}
             <img
               className="center gridImage"
               draggable="false"
@@ -78,6 +96,12 @@ class Grid extends Component {
             />
           </div>
           <div className="box" key="Me">
+            {this.state.currentTitle == "Me" && (
+              <div className="ocrloader">
+                <em />
+                <span />
+              </div>
+            )}
             <img
               className="center gridImage me"
               draggable="false"
