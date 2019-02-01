@@ -90,7 +90,7 @@ body {
   height: 20px;
   background-color: rgba(231, 10, 10, 0.54);
   z-index: 1;
-  transform: translateY(135%);
+  transform: translateY(300%);
   animation: move 0.7s cubic-bezier(0.15, 0.44, 0.76, 0.64);
   animation-iteration-count: infinite;
 }
@@ -192,6 +192,6 @@ body {
     transform: translateY(0%);
   }
   75% {
-    transform: translateY(272%);
+    transform: translateY(700%);
   }
 }
