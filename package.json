@@ -12,8 +12,7 @@
     "update": "git pull origin master & webpack --mode production"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "react-parallax": "^2.1.0"
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
@@ -26,6 +25,7 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-grid-layout": "^0.16.6",
+    "react-parallax": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.23.0",
     "webpack": "^4.18.0",
