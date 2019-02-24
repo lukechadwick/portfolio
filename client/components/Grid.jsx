@@ -17,8 +17,10 @@ class Grid extends Component {
 
   onLayoutChange = (layout, layouts) => {
     // console.log('layout', layout);
+    console.log(this.props);
     layout.forEach(e => {
-      // console.log(e);
+      console.log(e);
+
       if ((e.x == 0) & (e.y == 0)) {
         // console.log(e.i);
         this.setState({ currentTitle: e.i });
@@ -34,6 +36,8 @@ class Grid extends Component {
           layouts={layouts}
           breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
           cols={{ lg: 4, md: 4, sm: 4, xs: 4, xxs: 4 }}
+          // maxH={50}
+          // rowHeight={50}
           onLayoutChange={(layout, layouts) =>
             this.onLayoutChange(layout, layouts)
           }
