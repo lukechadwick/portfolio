@@ -57,9 +57,9 @@ class Grid extends Component {
               draggable='false'
               src='shelf2.png'
             />
-            <h2 className='center' style={{ color: 'white' }}>
-              Drag an icon into the scanner to find out more...
-            </h2>
+            <h3 className='center' style={{ color: 'white' }}>
+              Drag an icon into the scanner see more...
+            </h3>
           </div>
           <div className='box' key='Card'>
             <Card
