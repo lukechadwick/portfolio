@@ -190,12 +190,12 @@ body {
 @keyframes move {
   0%,
   100% {
-    transform: translateY(135%);
-  }
-  50% {
     transform: translateY(0%);
   }
+  50% {
+    transform: translateY(2rem);
+  }
   75% {
-    transform: translateY(700%);
+    transform: translateY(5rem);
   }
 }

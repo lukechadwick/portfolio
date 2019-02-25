@@ -15,12 +15,6 @@ export let layouts = {
       y: 3,
       i: 'Card',
       isDraggable: false
-      // minW: 2,
-      // maxW: 2,
-      // minH: 2,
-      // maxH: 2,
-      // moved: false,
-      // static: false
     },
     {
       w: 1,
