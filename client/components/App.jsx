@@ -11,7 +11,6 @@ class App extends Component {
         <div className='container'>
           <Grid />
         </div>
-        {/* <ParallaxScroll /> */}
       </React.Fragment>
     );
   }
