@@ -15,7 +15,11 @@ class Card extends Component {
               <h5 className='card-title'>Luke Chadwick</h5>
               <p className='card-text'>
                 Software, hardware and open-source enthusiast based in
-                Wellington, New Zealand.
+                Auckland, New Zealand.
+              </p>
+
+              <p className='card-text'>
+                I'm currently working for Shopify as a Plus Front-End Developer, helping Plus stores by implementing custom features and bug squashing.
               </p>
             </React.Fragment>
           )}
@@ -81,7 +85,7 @@ class Card extends Component {
                 </a>
               </p>
               <br />
-              <h4>GTST Dashboard</h4>
+              <h4>GYST Dashboard</h4>
               <p>
                 An all-in-one dashboard using widget based design, with
                 resizable and draggable applets. Powered by React/Redux with
@@ -103,12 +107,11 @@ class Card extends Component {
                 </a>
               </p>
               <br />
-              <h4>Ruby on Rails Blog</h4>
+              <h4>Linux Undervolt app for Intel CPUs</h4>
               <p>
-                A simple blog website make to learn basic CRUD operations in
-                Ruby on Rails, styled with Bootstrap 4. Hosted{' '}
+                A Linux desktop app to undervolt Intel CPUs. Powered by Electron. Hosted{' '}
                 <a
-                  href='http://rubyonrails-blog.herokuapp.com/'
+                  href='https://github.com/lukechadwick/linux-intel-undervolt-gui/'
                   target='_blank'
                 >
                   here.
@@ -133,7 +136,7 @@ class Card extends Component {
                   reseach project
                 </a>{' '}
                 into how people cheat in online games, in this case the popular
-                game Counter-Strike: GO
+                game Counter-Strike: GO. This contains an Aim/Trigger bot, D3D ESP overlay and recoil/spray compensation.
               </p>
             </React.Fragment>
           )}
