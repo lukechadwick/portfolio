@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import CardContact from './cards/CardContact';
+import CardMe from './cards/CardMe'
+import CardProjects from './cards/CardProjects';
+import CardTools from './cards/CardTools';
 
 class Card extends Component {
   constructor(props) {
@@ -11,134 +15,16 @@ class Card extends Component {
         <h2 className='card-header'>{this.props.title}</h2>
         <div className='card-body'>
           {this.props.title == 'Me' && (
-            <React.Fragment>
-              <h5 className='card-title'>Luke Chadwick</h5>
-              <p className='card-text'>
-                Software, hardware and open-source enthusiast based in
-                Auckland, New Zealand.
-              </p>
-
-              <p className='card-text'>
-                I'm currently working for Shopify as a Plus Front-End Developer, helping Plus stores by implementing custom features and bug squashing.
-              </p>
-            </React.Fragment>
+            <CardMe />
           )}
           {this.props.title == 'Contact Me' && (
-            <React.Fragment>
-              <h5 className='card-title center'>Email, Linked-in or GitHub</h5>
-              <div className='center'>
-                <a
-                  href="mailto:llukechadwick@gmail.com?subject=Let's%20get%20in%20touch&body="
-                  target='_blank'
-                >
-                  <img
-                    draggable='false'
-                    src='email.png'
-                    className='contactImage'
-                  />
-                </a>
-                <a
-                  href='https://www.linkedin.com/in/lukeachadwick/'
-                  target='_blank'
-                >
-                  <img
-                    draggable='false'
-                    src='linkedin.png'
-                    className='contactImage'
-                  />
-                </a>
-                <a href='https://github.com/lukechadwick' target='_blank'>
-                  <img
-                    draggable='false'
-                    src='github.png'
-                    className='contactImage'
-                  />
-                </a>
-              </div>
-            </React.Fragment>
+            <CardContact />
           )}
           {this.props.title == 'Tools' && (
-            <React.Fragment>
-              <h4 className='card-title center'>The Tools of my trade</h4>
-              <img draggable='false' src='js.png' className='toolImage' />
-              <img draggable='false' src='node.png' className='toolImage' />
-              <img draggable='false' src='react.png' className='toolImage' />
-              <img draggable='false' src='html.png' className='toolImage' />
-              <img draggable='false' src='css.png' className='toolImage' />
-              <img draggable='false' src='csharp.png' className='toolImage' />
-              <img draggable='false' src='rails.png' className='toolImage' />
-            </React.Fragment>
+            <CardTools />
           )}
           {this.props.title == 'Projects' && (
-            <React.Fragment>
-              <h4 className='card-title center'>
-                A few things I've worked on...
-              </h4>
-              <br />
-              <h4>Xiayu</h4>
-              <p>
-                A 2D platform/shooter written in Javascript and rendered using
-                Canvas, featuring collision detection, basic physics, AI, and of
-                course, a boss fight. Playable{' '}
-                <a href='https://lukechadwick.github.io/xiayu/' target='_blank'>
-                  here.
-                </a>
-              </p>
-              <br />
-              <h4>GYST Dashboard</h4>
-              <p>
-                An all-in-one dashboard using widget based design, with
-                resizable and draggable applets. Powered by React/Redux with
-                Material-UI as the design framework. Hosted{' '}
-                <a href='http://gyst-dash.herokuapp.com/' target='_blank'>
-                  here.
-                </a>
-              </p>
-              <br />
-              <h4>VPN Project</h4>
-              <p>
-                A VPN service aimed at providing an easy to use and performant
-                experience. Powered by and hosted on Vultr running Ubuntu and
-                using Shadowsocks to encrypt and protect traffic. Website
-                powered by React/node/nginx and SSL certs provided by Let's
-                Encrypt. Hosted{' '}
-                <a href='https://codeproject.site/' target='_blank'>
-                  here.
-                </a>
-              </p>
-              <br />
-              <h4>Linux Undervolt app for Intel CPUs</h4>
-              <p>
-                A Linux desktop app to undervolt Intel CPUs. Powered by Electron. Hosted{' '}
-                <a
-                  href='https://github.com/lukechadwick/linux-intel-undervolt-gui/'
-                  target='_blank'
-                >
-                  here.
-                </a>
-              </p>
-              <br />
-              <h4>C#</h4>
-              <p>
-                A few projects in C# ranging from a{' '}
-                <a
-                  href='https://github.com/lukechadwick/FTDS-finish-the-day-sheet-'
-                  target='_blank'
-                >
-                  simple app
-                </a>{' '}
-                I used to automate the paperwork at a previous job in
-                hospitality, to a{' '}
-                <a
-                  href='https://github.com/lukechadwick/CS-GO-Aimbot-ESP'
-                  target='_blank'
-                >
-                  reseach project
-                </a>{' '}
-                into how people cheat in online games, in this case the popular
-                game Counter-Strike: GO. This contains an Aim/Trigger bot, D3D ESP overlay and recoil/spray compensation.
-              </p>
-            </React.Fragment>
+            <CardProjects />
           )}
         </div>
       </div>
